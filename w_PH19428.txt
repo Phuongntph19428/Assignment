@@ -1,0 +1,7 @@
+catId: 1, catName: Tom, price: 500000.0, quantity: 4, color: BLUE, weight: 3.5
+catId: 2, catName: Cat34, price: 600000.0, quantity: 4, color: BLACK, weight: 4.2
+catId: 3, catName: Mane Moon, price: 750000.0, quantity: 2, color: BLACK, weight: 3.8
+catId: 4, catName: Bengal, price: 890000.0, quantity: 1, color: YELLOW, weight: 3.5
+catId: 5, catName: Sphyx, price: 1000000.0, quantity: 5, color: WHITE, weight: 4.0
+catId: 7, catName: Tom, price: 500000.0, quantity: 4, color: BLUE, weight: 3.5
+catId: 6, catName: Tom, price: 500000.0, quantity: 4, color: BLUE, weight: 3.5
