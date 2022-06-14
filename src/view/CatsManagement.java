@@ -42,6 +42,7 @@ public class CatsManagement extends javax.swing.JFrame implements Runnable {
         Thread t1 = new Thread(this);
         t1.start();
         btnShow.doClick();
+        lblBackGround.setIcon(new ImageIcon(getClass().getClassLoader().getResource("background.gif")));
     }
 
     /**
@@ -438,7 +439,7 @@ public class CatsManagement extends javax.swing.JFrame implements Runnable {
         try {
             // TODO add your handling code here:
             cats.saveFile(cats.getAll());
-            JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='green'>Lưu thành công!", "Successfull", 1, new ImageIcon("D:\\FPTPolytechnic\\MOB1023\\Assignment\\src\\btnIcon\\saveicon.gif"));
+            JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='green'>Lưu thành công!", "Successfull", 1, new ImageIcon(getClass().getClassLoader().getResource("saveicon.gif")));
             btnSave.setEnabled(false);
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this, "Lỗi không thể lưu file!", "Error", 0);
@@ -563,7 +564,7 @@ public class CatsManagement extends javax.swing.JFrame implements Runnable {
                 cats.addCat(selectInfCat());
                 fillTable();
                 clearAllField();
-                JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='green'>Thêm thành công!", "Succesfull", 1, new ImageIcon("D:\\FPTPolytechnic\\MOB1023\\Assignment\\src\\btnIcon\\success.gif"));
+                JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='green'>Thêm thành công!", "Succesfull", 1, new ImageIcon(getClass().getClassLoader().getResource("success.gif")));
                 btnSave.setEnabled(true);
 
             }
@@ -593,7 +594,8 @@ public class CatsManagement extends javax.swing.JFrame implements Runnable {
                 if (JOptionPane.showConfirmDialog(this, "Bạn có muốn update không?") == JOptionPane.OK_OPTION) {
 
                     cats.updateCat(selectInfCat());
-                    JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='green'>Sửa thành công!", "Succesfull", 1, new ImageIcon("D:\\FPTPolytechnic\\MOB1023\\Assignment\\src\\btnIcon\\success.gif"));
+                    JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='green'>Sửa thành công!", "Succesfull", 1, 
+                            new ImageIcon(getClass().getClassLoader().getResource("success.gif")));
                     fillTable();
                     btnSave.setEnabled(true);
                 }
@@ -617,7 +619,7 @@ public class CatsManagement extends javax.swing.JFrame implements Runnable {
                     cats.deleteCat(catId);
                     fillTable();
                     btnSave.setEnabled(true);
-                    JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='red'>Xóa thành công!", "Succesfull", 1, new ImageIcon("D:\\FPTPolytechnic\\MOB1023\\Assignment\\src\\btnIcon\\deleteCat.gif"));
+                    JOptionPane.showMessageDialog(this, "<html><font face='Calibri' size='15' color='red'>Xóa thành công!", "Succesfull", 1, new ImageIcon(getClass().getClassLoader().getResource("deleteCat.gif")));
 
                 }
             } else {
